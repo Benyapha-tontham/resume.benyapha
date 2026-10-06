@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Benyapha Tontham — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+Thai:wght@300;400;500;600&family=Inter:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="nav">
+  <a href="#top" class="logo">BT.</a>
+  <nav>
+    <a href="#about">About</a><a href="#skills">Skills</a><a href="#works">Works</a><a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-text">
+    <p class="eyebrow">Digital Industry Integration Student</p>
+    <h1>Benyapha<br><span>Tontham.</span></h1>
+    <p class="lead">นักศึกษาชั้นปีที่ 1 ผู้สนใจการเขียนโปรแกรม เทคโนโลยี<br>และการเปลี่ยนไอเดียให้กลายเป็นผลงานดิจิทัลที่ใช้งานได้จริง</p>
+    <div class="btns">
+      <a href="#works" class="btn primary">View my work</a>
+      <a href="#about" class="btn">About me</a>
+    </div>
+  </div>
+
+  <div class="hero-card">
+    <div class="flip" id="flip" tabindex="0" role="button" aria-label="Flip card">
+      <div class="face front">
+        <div class="dots"><i></i><i></i><i></i><span>introduction.py</span></div>
+<pre><code><b>class</b> Benyapha:
+    university = "Chiang Mai University"
+    faculty = "CAMT"
+    major = "Digital Industry Integration"
+    year = 1
+
+    <b>def</b> say_hello(self):
+        <b>return</b> "Hello, I'm Benyapha Tontham"</code></pre>
+        <small>Click to see photo</small>
+      </div>
+      <div class="face back" id="photoFace"><small>Click to return to code</small></div>
+    </div>
+    <label class="upload">Upload profile photo<input type="file" id="photo" accept="image/*" hidden></label>
+  </div>
+</section>
+
+<section id="about">
+  <p class="tag">01 / About</p>
+  <h2>เส้นทางการศึกษาและบทบาท</h2>
+  <div class="two">
+    <div>
+      <div class="head"><span>Education journey</span><span class="blue">2025 — Present</span></div>
+      <ol class="timeline">
+        <li><small>จุดเริ่มต้น / 2025</small><h3>มหาวิทยาลัยเชียงใหม่</h3><p>วิทยาลัยศิลปะ สื่อ และเทคโนโลยี (CAMT)<br>สาขา Digital Industry Integration (DII)</p></li>
+        <li class="now"><small class="blue">Current status</small><div class="big">01<span>ปัจจุบันกำลังศึกษา<br>ชั้นปีที่ 1</span></div></li>
+      </ol>
+    </div>
+    <div>
+      <div class="head"><span>My roles</span></div>
+      <ul class="roles">
+        <li><h3>Full Stack</h3><p>พัฒนาและดูแลระบบทั้ง Front-end และ Back-end</p></li>
+        <li><h3>UX/UI</h3><p>ออกแบบประสบการณ์และหน้าตาที่ใช้งานได้ง่าย</p></li>
+        <li><h3>QA</h3><p>ตรวจสอบคุณภาพและความถูกต้องก่อนนำไปใช้งาน</p></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <p class="tag">02 / Technical skills</p>
+  <div class="row"><h2>Programming languages</h2><p class="note">ภาษาที่กำลังเรียนรู้และพัฒนาทักษะ<br>พร้อมตัวอย่างคำสั่งแนะนำตัวในแต่ละภาษา</p></div>
+  <div class="grid">
+    <article><span class="n">01</span><h3><i class="d" style="--c:#60a5fa"></i>C</h3><small>Intermediate</small><code>&gt; printf("Benyapha Tontham");</code></article>
+    <article><span class="n">02</span><h3><i class="d" style="--c:#fbbf24"></i>Python</h3><small>Intermediate</small><code>&gt; print("Benyapha Tontham")</code></article>
+    <article><span class="n">03</span><h3><i class="d" style="--c:#fb7f6a"></i>Java</h3><small>Fundamentals</small><code>&gt; System.out.println("Benyapha Tontham");</code></article>
+    <article><span class="n">04</span><h3><i class="d" style="--c:#4fd1a5"></i>R</h3><small>Fundamentals</small><code>&gt; print("Benyapha Tontham")</code></article>
+  </div>
+</section>
+
+<section id="works">
+  <p class="tag">03 / Selected works</p>
+  <div class="row"><h2>ผลงานที่โดดเด่น</h2><button class="btn outline" id="addWork">+ Add your project</button></div>
+  <div class="works" id="workList">
+    <article class="work"><span class="ghost">01</span><small class="blue">Your project</small><h3>พื้นที่สำหรับผลงานชิ้นที่หนึ่ง</h3><p>เพิ่มรายละเอียดโปรเจกต์ บทบาทของคุณ และสิ่งที่ได้เรียนรู้จากผลงานชิ้นนี้</p></article>
+    <article class="work"><span class="ghost">02</span><small class="blue">Coming soon</small><h3>พื้นที่สำหรับผลงานชิ้นที่สอง</h3><p>ผลงานในชั้นเรียน งานประกวด หรือโปรเจกต์ส่วนตัว สามารถนำมาใส่ที่นี่ได้</p></article>
+  </div>
+</section>
+
+<footer id="contact">
+  <span>Benyapha Tontham / Portfolio</span>
+  <span class="links"><a href="mailto:">Email</a><a href="#">Instagram</a><a href="#">GitHub</a><a href="#">Facebook</a></span>
+  <span>Chiang Mai, Thailand</span>
+</footer>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
