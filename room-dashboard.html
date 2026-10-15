@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f6f8">
+  <title>Room availability — Benyapha Tontham</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="room-dashboard.css">
+</head>
+<body>
+  <main class="dashboard">
+    <header class="topbar">
+      <a class="brand" href="index.html"><span class="brand-mark">BT</span><span>Benyapha Tontham<small>Room availability</small></span></a>
+      <div class="connection" id="connection" data-state="connecting" role="status" aria-live="polite">
+        <span class="connection-dot"></span><span id="connectionText">Connecting to dashboard…</span>
+      </div>
+    </header>
+
+    <section class="intro" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow">ROOM STATUS / LIVE VIEW</p>
+        <h1 id="page-title">Room availability</h1>
+        <p class="subtitle">See which rooms are ready and when each Core2 last reported.</p>
+      </div>
+      <div class="updated"><span class="updated-icon" aria-hidden="true">↻</span><span id="lastSync">Waiting for first update</span></div>
+    </section>
+
+    <section class="summary" aria-label="Room status summary">
+      <article class="summary-card"><span class="summary-label">Available</span><strong class="summary-value" id="availableCount">—</strong><span class="summary-hint">Ready to use</span></article>
+      <article class="summary-card"><span class="summary-label">Occupied</span><strong class="summary-value" id="occupiedCount">—</strong><span class="summary-hint">Currently in use</span></article>
+      <article class="summary-card"><span class="summary-label">Offline</span><strong class="summary-value" id="offlineCount">—</strong><span class="summary-hint">No recent device update</span></article>
+    </section>
+
+    <section class="rooms-section" aria-labelledby="rooms-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">YOUR SPACE</p><h2 id="rooms-title">Rooms <span id="roomTotal" class="room-total"></span></h2></div>
+        <label class="filter-label" for="roomFilter">Show
+          <select id="roomFilter">
+            <option value="all">All rooms</option>
+            <option value="available">Available</option>
+            <option value="occupied">Occupied</option>
+            <option value="offline">Offline</option>
+          </select>
+        </label>
+      </div>
+      <div id="roomList" class="room-grid" aria-live="polite">
+        <div class="loading-card">Loading room status…</div>
+      </div>
+      <p id="emptyMessage" class="empty-message" hidden>No rooms match this filter.</p>
+    </section>
+
+    <footer class="page-footer">
+      <span>Read-only room status dashboard</span>
+      <a href="index.html">Back to portfolio</a>
+    </footer>
+  </main>
+  <script src="room-dashboard.js"></script>
+</body>
+</html>
